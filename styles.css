@@ -1,0 +1,45 @@
+.body {
+  margin: 0;
+}
+
+.textBoxContainer {
+  display: flex;
+
+  justify-content: center;
+}
+
+.textBox {
+  background-color: aqua;
+  border: 2px solid black;
+  height: 10rem;
+  width: 10rem;
+  margin: 1rem;
+  font-size: 7rem;
+  text-align: center;
+}
+
+.inputContent {
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.inputText {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.displayInfo {
+  border: 2px solid grey;
+  border-radius: 10px;
+
+  height: 4rem;
+  margin: auto;
+  width: 50%;
+  font-size: 2rem;
+  text-align: center;
+}
+.reset {
+  margin-left: 50%;
+  margin-top: 2rem;
+}
