@@ -374,9 +374,11 @@ const char3 = document.querySelector(".box3");
 const char4 = document.querySelector(".box4");
 const answer = document.querySelector(".submit");
 const reset = document.querySelector(".reset");
-let score = 0;
+const inputValue = document.querySelector(".inputContent");
+const winAction = document.getElementById("message").style;
+const scoreMessage = document.querySelector(".score");
 
-// const words = ["able", "blow", "camp", "desk", "edge", "ford", "gray", "held"];
+let score = 0;
 
 let secretWord = words[Math.trunc(Math.random() * words.length - 1)];
 
@@ -391,13 +393,18 @@ click.addEventListener("click", function () {
 });
 
 answer.addEventListener("click", function () {
-  if (secretWord === document.querySelector(".inputContent").value) {
+  if (secretWord === inputValue.value.toLowerCase()) {
     score += 10;
-    click.textContent = `Correct answer, your score is ${score}`;
+    click.textContent = `Correct answer, click reset to continue`;
+    winAction.backgroundColor = "green";
+    winAction.color = "white";
+    scoreMessage.textContent = `Score: ${score}`;
   } else {
-    click.textContent = `wrong answer, correct answer is ${secretWord}, 
-    final score = ${score}`;
+    click.textContent = `wrong answer, correct answer is ${secretWord}, click reset to continue`;
     score = 0;
+    winAction.backgroundColor = "red";
+    winAction.color = "white";
+    scoreMessage.textContent = `Score: ${score}`;
   }
 });
 
@@ -409,4 +416,5 @@ reset.addEventListener("click", function () {
   click.textContent = "click here to Start !";
   document.querySelector(".inputContent").value = "";
   secretWord = words[Math.trunc(Math.random() * words.length - 1)];
+  winAction.color = "white";
 });
