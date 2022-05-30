@@ -33,13 +33,19 @@
   border: 2px solid grey;
   border-radius: 10px;
 
-  height: 4rem;
-  margin: auto;
-  width: 50%;
-  font-size: 2rem;
+  height: 10vh;
+
+  width: 100%;
+
   text-align: center;
+  margin-top: 70%;
+  background-color: white;
 }
-.reset {
-  margin-left: 50%;
-  margin-top: 2rem;
+.score {
+  background-color: grey;
+  height: 10vh;
+  text-align: center;
+  color: white;
+
+  border-radius: 10px;
 }
